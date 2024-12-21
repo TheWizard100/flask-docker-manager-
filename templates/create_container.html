@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create New Container</title>
+</head>
+<body>
+    <h1>Create New Container</h1>
+    <form method="POST">
+        Container Name: <input type="text" name="name" required><br>
+        Image: <input type="text" name="image" required><br>
+        Host Port: <input type="text" name="host_port" required><br>
+        Container Port: <input type="text" name="container_port" required><br>
+        <button type="submit">Create Container</button>
+    </form>
+    <a href="{{ url_for('home') }}">Back to Home</a>
+</body>
+</html>
+

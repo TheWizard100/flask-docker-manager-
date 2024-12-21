@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <title>ניהול קונטיינרי Docker</title>
+</head>
+<body>
+    <h1>ברוכים הבאים לניהול קונטיינרי Docker</h1>
+    <a href="{{ url_for('create_container') }}">צור קונטיינר חדש</a>
+    <h2>רשימת קונטיינרים</h2>
+    <ul>
+        {% for container in containers %}
+        <li>
+            {{ container.name }} - {{ container.status }}
+            <a href="{{ url_for('access_container', container_id=container.id) }}">גשת לקונטיינר</a>
+            <a href="{{ url_for('delete_container', container_id=container.id) }}">מחק קונטיינר</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
